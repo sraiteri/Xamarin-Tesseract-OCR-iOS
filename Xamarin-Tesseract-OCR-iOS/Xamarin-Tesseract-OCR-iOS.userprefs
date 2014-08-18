@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Default" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tesseract.iOS-Sample/ViewController/TesseractViewController.cs">
+    <Files>
+      <File FileName="Tesseract.iOS/ApiDefinition.cs" Line="1" Column="1" />
+      <File FileName="Tesseract.iOS/libTesseractiOS.linkwith.cs" Line="1" Column="1" />
+      <File FileName="Tesseract.iOS/Extensions.cs" Line="1" Column="1" />
+      <File FileName="Tesseract.iOS-Sample/Info.plist" />
+      <File FileName="Tesseract.iOS-Sample/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="Tesseract.iOS-Sample/ViewController/TesseractViewController.cs" Line="27" Column="27" />
+      <File FileName="Tesseract.iOS-Sample/Main.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

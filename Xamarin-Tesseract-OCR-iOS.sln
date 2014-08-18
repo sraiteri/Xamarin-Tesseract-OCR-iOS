@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesseract.iOS", "Xamarin-Tesseract-OCR-iOS\Tesseract.iOS\Tesseract.iOS.csproj", "{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tesseract.iOS-Sample", "Xamarin-Tesseract-OCR-iOS\Tesseract.iOS-Sample\Tesseract.iOS-Sample.csproj", "{A4307B75-942D-44C0-9132-57F57FC58018}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Any CPU = Default|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{A4307B75-942D-44C0-9132-57F57FC58018}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{A4307B75-942D-44C0-9132-57F57FC58018}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Debug|iPhone.Build.0 = Debug|iPhone
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Default|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Default|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Release|iPhone.ActiveCfg = Release|iPhone
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Release|iPhone.Build.0 = Release|iPhone
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{A4307B75-942D-44C0-9132-57F57FC58018}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Release|iPhone.Build.0 = Release|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Xamarin-Tesseract-OCR-iOS\Tesseract.iOS-Sample\Tesseract.iOS-Sample.csproj
+	EndGlobalSection
+EndGlobal
