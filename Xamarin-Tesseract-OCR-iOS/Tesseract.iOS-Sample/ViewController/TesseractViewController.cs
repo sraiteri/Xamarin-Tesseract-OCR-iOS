@@ -17,15 +17,15 @@ namespace Tesseract.iOSSample
 		{
 			base.ViewDidLoad ();
 			
-			//Initalise the tesseract object - using tessdata (path to the training data), with eng ("English")
+			//Initalise the tesseract object - using tessdata (path to the training data in the binding project), with eng ("English")
 			//as the language
 			var tesseractOcr = new Tesseract.iOS.Tesseract ("tessdata", "eng");
 
-			//Set the image to be scanned for text
+			//Set the image to be scanned for text (added as a BundleResource)
 			tesseractOcr.SetImage (UIImage.FromBundle ("test-image.jpeg"));
 
 			//Recognise text in the scanned image - sync method called here, but can be async
-			//Text is: "The quick brown fox jumped over the lazy dog"
+			//Text is: "The quick brown fox jumped over the Lazy dog"
 			tesseractOcr.Recognize ();
 
 			//Show the recognised text in a UIAlertView
