@@ -46,6 +46,7 @@ namespace Tesseract.iOSSample
 
 			loader.Show (true);
 
+			//Extract text from the image
 			var tesseract = TesseractHelper.CreateTesseract ();
 			tesseract.SetImage (imageToBeProcessed);
 			var recognisedText = await tesseract.RecognizeAsync ();
