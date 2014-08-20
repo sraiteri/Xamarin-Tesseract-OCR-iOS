@@ -1,36 +1,73 @@
 ﻿using System;
-using System.Drawing;
 
-using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using System.IO;
+using MBProgressHUD;
 
 namespace Tesseract.iOSSample
 {
 	public partial class TesseractViewController : UIViewController
 	{
+		UIImagePickerController _imagePickerController;
+		readonly PickerDelegate _pickerDelegate;
+
 		public TesseractViewController () : base ("TesseractViewController", null)
 		{
+			_pickerDelegate = new PickerDelegate (this);
 		}
 			
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
-			//Initalise the tesseract object - using tessdata (path to the training data in the binding project), with eng ("English")
-			//as the language
-			var tesseractOcr = new Tesseract.iOS.Tesseract ("tessdata", "eng");
 
-			//Set the image to be scanned for text (added as a BundleResource)
-			tesseractOcr.SetImage (UIImage.FromBundle ("test-image.jpeg"));
+			Title = "Tesseract OCR";
 
-			//Recognise text in the scanned image - sync method called here, but can be async
-			//Text is: "The quick brown fox jumped over the Lazy dog"
-			tesseractOcr.Recognize ();
+			//Wire in the buttons
+			RecogniseExistingImage_Button.TouchUpInside += HandleRecogniseExistingImageButtonPressed;;
+			TakePicture_Button.TouchUpInside += HandleTakePictureButtonPressed;
+		}
 
-			//Show the recognised text in a UIAlertView
-			new UIAlertView ("Recognised text", tesseractOcr.RecognizedText, null, "OK").Show ();
+		void HandleRecogniseExistingImageButtonPressed (object sender, EventArgs e)
+		{
+			ExtractResults (UIImage.FromBundle ("test-image.jpeg"));
+		}
 
+		public async void ExtractResults(UIImage image)
+		{
+			var loader = LoaderHelper.CreateLoaderForView (View);
+
+			loader.Show (true);
+
+			var tesseract = TesseractHelper.CreateTesseract ();
+			tesseract.SetImage (image);
+			var recognisedText = await tesseract.RecognizeAsync ();
+
+			loader.Hide (true);
+
+
+			new UIAlertView ("Text extracted from image", recognisedText, null, "OK").Show ();
+		}
+
+		void HandleTakePictureButtonPressed (object sender, System.EventArgs e)
+		{
+			try {
+
+				_imagePickerController = new UIImagePickerController ();
+
+				//Assign the delegate for the controller
+				_imagePickerController.Delegate = _pickerDelegate;
+
+				_imagePickerController.SourceType = UIImagePickerControllerSourceType.Camera;
+				_imagePickerController.MediaTypes = UIImagePickerController.AvailableMediaTypes 
+					(UIImagePickerControllerSourceType.Camera);
+
+				// show the camera controls
+				_imagePickerController.ShowsCameraControls = true;
+
+				NavigationController.PresentViewController (_imagePickerController, true, null);
+			} catch (Exception) {
+				var alert = new UIAlertView ("No Camera", "No Camera Detected on the device", null, "OK", null);
+				alert.Show ();
+			}
 		}
 	}
 }

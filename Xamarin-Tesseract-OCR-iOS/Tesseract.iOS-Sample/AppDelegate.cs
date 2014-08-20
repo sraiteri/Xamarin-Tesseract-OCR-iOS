@@ -18,7 +18,7 @@ namespace Tesseract.iOSSample
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			
 			// Load straight into the TesseractViewController
-			window.RootViewController = new TesseractViewController();
+			window.RootViewController = new UINavigationController(new TesseractViewController());
 			
 			// make the window visible
 			window.MakeKeyAndVisible ();

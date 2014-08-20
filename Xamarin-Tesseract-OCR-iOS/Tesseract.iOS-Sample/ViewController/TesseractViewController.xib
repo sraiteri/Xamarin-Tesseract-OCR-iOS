@@ -1,21 +1,82 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
-	<dependencies>
-		<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742" />
-	</dependencies>
-	<objects>
-		<placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TesseractViewController">
-			<connections>
-				<outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq" />
-			</connections>
-		</placeholder>
-		<placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder" />
-		<view contentMode="scaleToFill" id="iN0-l3-epB">
-			<rect key="frame" x="0.0" y="0.0" width="320" height="568" />
-			<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
-			<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
-			<simulatedStatusBarMetrics key="simulatedStatusBarMetrics" />
-			<simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4" />
-		</view>
-	</objects>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TesseractViewController">
+            <connections>
+                <outlet property="RecogniseExistingImage_Button" destination="K6G-nT-IsO" id="hST-SZ-Wps"/>
+                <outlet property="TakePicture_Button" destination="GFz-CG-Eu9" id="Co6-FL-uaL"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55a-6e-1zG">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose from the options below:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Vvs-Uo-2on">
+                            <rect key="frame" x="20" y="80" width="280" height="92"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="92" id="P5c-m1-hCf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6G-nT-IsO">
+                            <rect key="frame" x="20" y="202" width="280" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="KKh-Vr-bge"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="Recognise predefined image">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFz-CG-Eu9">
+                            <rect key="frame" x="20" y="276" width="280" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="L5o-R8-fud"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <state key="normal" title="Take picture &amp; extract text">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="GFz-CG-Eu9" secondAttribute="trailing" constant="20" id="3FK-HF-TW7"/>
+                        <constraint firstAttribute="trailing" secondItem="Vvs-Uo-2on" secondAttribute="trailing" constant="20" id="45c-7p-hVJ"/>
+                        <constraint firstItem="Vvs-Uo-2on" firstAttribute="leading" secondItem="55a-6e-1zG" secondAttribute="leading" constant="20" id="5GQ-tJ-A7x"/>
+                        <constraint firstAttribute="trailing" secondItem="K6G-nT-IsO" secondAttribute="trailing" constant="20" id="Caa-hX-DN4"/>
+                        <constraint firstItem="Vvs-Uo-2on" firstAttribute="top" secondItem="55a-6e-1zG" secondAttribute="top" constant="80" id="GMr-iw-IJd"/>
+                        <constraint firstItem="GFz-CG-Eu9" firstAttribute="top" secondItem="K6G-nT-IsO" secondAttribute="bottom" constant="30" id="JSP-RG-SQe"/>
+                        <constraint firstItem="K6G-nT-IsO" firstAttribute="top" secondItem="Vvs-Uo-2on" secondAttribute="bottom" constant="30" id="WPk-Gp-rqv"/>
+                        <constraint firstItem="K6G-nT-IsO" firstAttribute="leading" secondItem="55a-6e-1zG" secondAttribute="leading" constant="20" id="vqW-6Q-Amd"/>
+                        <constraint firstItem="GFz-CG-Eu9" firstAttribute="leading" secondItem="55a-6e-1zG" secondAttribute="leading" constant="20" id="zVN-7A-Fln"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="55a-6e-1zG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HY8-Cb-NEZ"/>
+                <constraint firstAttribute="trailing" secondItem="55a-6e-1zG" secondAttribute="trailing" id="Ncz-hI-5qf"/>
+                <constraint firstAttribute="bottom" secondItem="55a-6e-1zG" secondAttribute="bottom" id="PY7-Gf-MNB"/>
+                <constraint firstItem="55a-6e-1zG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rco-hg-R3J"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
 </document>

@@ -59,6 +59,7 @@
     </MtouchI18n>
     <MtouchArch>ARMv7</MtouchArch>
     <MtouchFastDev>true</MtouchFastDev>
+    <CodesignProvision>d18e6e6f-633d-46f3-917a-0d0ca14140ea</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -101,6 +102,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="MBProgressHUD">
+      <HintPath>..\..\Components\mbprogresshud-0.8\lib\ios\MBProgressHUD.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -117,18 +121,30 @@
     <Compile Include="ViewController\TesseractViewController.designer.cs">
       <DependentUpon>TesseractViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delegate\PickerDelegate.cs" />
+    <Compile Include="Utils\LoaderHelper.cs" />
+    <Compile Include="Utils\TesseractHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <Folder Include="ViewController\" />
+    <Folder Include="Delegate\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="ViewController\TesseractViewController.xib" />
+    <InterfaceDefinition Include="Resources\ViewController\TesseractCameraScanViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tesseract.iOS\Tesseract.iOS.csproj">
       <Project>{CD48DCF7-1C6D-4E5B-92E8-C2C2E052E5E8}</Project>
       <Name>Tesseract.iOS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="mbprogresshud">
+      <Version>0.8</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
 </Project>
