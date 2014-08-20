@@ -13,6 +13,9 @@ namespace Tesseract.iOSSample
 	partial class TesseractViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIImageView LastImage_ImageView { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton RecogniseExistingImage_Button { get; set; }
 
 		[Outlet]
@@ -20,14 +23,19 @@ namespace Tesseract.iOSSample
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (RecogniseExistingImage_Button != null) {
+				RecogniseExistingImage_Button.Dispose ();
+				RecogniseExistingImage_Button = null;
+			}
+
 			if (TakePicture_Button != null) {
 				TakePicture_Button.Dispose ();
 				TakePicture_Button = null;
 			}
 
-			if (RecogniseExistingImage_Button != null) {
-				RecogniseExistingImage_Button.Dispose ();
-				RecogniseExistingImage_Button = null;
+			if (LastImage_ImageView != null) {
+				LastImage_ImageView.Dispose ();
+				LastImage_ImageView = null;
 			}
 		}
 	}

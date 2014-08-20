@@ -1,6 +1,8 @@
 ﻿using System;
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
+using System.Drawing;
+using MonoTouch.CoreGraphics;
 
 namespace Tesseract.iOSSample
 {
@@ -20,7 +22,7 @@ namespace Tesseract.iOSSample
 			//Dismiss the picker
 			picker.DismissViewController (true, null);
 		}
-
+			
 		public override void FinishedPickingMedia (UIImagePickerController picker, NSDictionary info)
 		{
 			//Determine that an image was selected
@@ -43,7 +45,7 @@ namespace Tesseract.iOSSample
 				else if (editedImage != null)
 					image = editedImage;
 
-				picker.DismissViewController (false, () => _parentViewController.ExtractResults (image));
+				picker.DismissViewController (false, () => _parentViewController.ExtractResults (image, true));
 				return;
 			}
 
