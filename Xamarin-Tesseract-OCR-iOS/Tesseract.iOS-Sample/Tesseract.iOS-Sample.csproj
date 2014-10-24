@@ -59,7 +59,6 @@
     </MtouchI18n>
     <MtouchArch>ARMv7</MtouchArch>
     <MtouchFastDev>true</MtouchFastDev>
-    <CodesignProvision>d18e6e6f-633d-46f3-917a-0d0ca14140ea</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
