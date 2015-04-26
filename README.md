@@ -2,6 +2,8 @@ Xamarin Tesseract OCR binding for iOS
 =====================================
 
 
+DEPRECATED - This is an old binding against an old version of Tesseract OCR for iOS. Please use https://github.com/jherby2k/Xamarin-Tesseract-OCR-iOS-Unified as this is the maintained version. The master branch has not been updated for Unified API support, but the 'unified-api' branch has been and will be kept for reference purposes.
+
 About
 -----
 
