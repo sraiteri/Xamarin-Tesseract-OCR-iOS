@@ -4,7 +4,7 @@
 // actions made in the UI designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 using System.CodeDom.Compiler;
 
 namespace Tesseract.iOSSample
@@ -13,13 +13,13 @@ namespace Tesseract.iOSSample
 	partial class TesseractViewController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIImageView LastImage_ImageView { get; set; }
+		UIKit.UIImageView LastImage_ImageView { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton RecogniseExistingImage_Button { get; set; }
+		UIKit.UIButton RecogniseExistingImage_Button { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton TakePicture_Button { get; set; }
+		UIKit.UIButton TakePicture_Button { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

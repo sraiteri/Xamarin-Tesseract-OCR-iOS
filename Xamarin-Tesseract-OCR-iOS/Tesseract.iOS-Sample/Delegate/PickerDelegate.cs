@@ -1,8 +1,8 @@
 ﻿using System;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
-using System.Drawing;
-using MonoTouch.CoreGraphics;
+using UIKit;
+using Foundation;
+using CoreGraphics;
+using CoreGraphics;
 
 namespace Tesseract.iOSSample
 {

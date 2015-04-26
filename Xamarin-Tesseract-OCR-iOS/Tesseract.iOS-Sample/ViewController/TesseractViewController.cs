@@ -1,9 +1,9 @@
 ﻿using System;
 
-using MonoTouch.UIKit;
+using UIKit;
 using MBProgressHUD;
-using System.Drawing;
-using MonoTouch.CoreGraphics;
+using CoreGraphics;
+using CoreGraphics;
 
 namespace Tesseract.iOSSample
 {
@@ -48,7 +48,7 @@ namespace Tesseract.iOSSample
 
 			//Extract text from the image
 			var tesseract = TesseractHelper.CreateTesseract ();
-			tesseract.SetImage (imageToBeProcessed);
+			tesseract.Image = imageToBeProcessed;
 			var recognisedText = await tesseract.RecognizeAsync ();
 
 			loader.Hide (true);
@@ -56,7 +56,7 @@ namespace Tesseract.iOSSample
 			new UIAlertView ("Text extracted from image", recognisedText, null, "OK").Show ();
 		}
 
-		void HandleTakePictureButtonPressed (object sender, System.EventArgs e)
+		void HandleTakePictureButtonPressed (object sender, EventArgs e)
 		{
 			try {
 
@@ -98,7 +98,7 @@ namespace Tesseract.iOSSample
 
 		UIImage ConvertToGrayScale (UIImage image)
 		{
-			var imageRect = new RectangleF (PointF.Empty, image.Size);
+			var imageRect = new CGRect (CGPoint.Empty, image.Size);
 			using (var colorSpace = CGColorSpace.CreateDeviceGray ())
 			using (var context = new CGBitmapContext (IntPtr.Zero, (int) imageRect.Width, (int) imageRect.Height, 8, 0, colorSpace, CGImageAlphaInfo.None)) {
 				context.DrawImage (imageRect, image.CGImage);
@@ -110,7 +110,7 @@ namespace Tesseract.iOSSample
 		UIImage ScaleImage(UIImage image)
 		{
 			//Picking default iPhone 4 size
-			var newRect = new RectangleF(0,0, 320f, 480f);
+			var newRect = new CGRect(0,0, 320f, 480f);
 			UIGraphics.BeginImageContextWithOptions(newRect.Size, false, 0.0f);
 			image.Draw (newRect);
 			var scaledImage = UIGraphics.GetImageFromCurrentImageContext ();
@@ -140,7 +140,7 @@ namespace Tesseract.iOSSample
 			rectTransform = CGAffineTransform.Scale(rectTransform, image.CurrentScale, image.CurrentScale);
 
 			image.CGImage.WithImageInRect (CGAffineTransform.CGRectApplyAffineTransform (
-				new RectangleF(0,0, image.Size.Width, image.Size.Height), rectTransform));
+				new CGRect(0,0, image.Size.Width, image.Size.Height), rectTransform));
 
 			var portraitImage = UIImage.FromImage (image.CGImage, image.CurrentScale, image.Orientation);
 
